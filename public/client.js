@@ -18,6 +18,27 @@ $(document).ready(function () {
                 return parseInt(first) + parseInt(second);
             }
         })
+        $('.sub').on('click', function () {
+            console.log('sub button was clicked');
+            $('.buttons').append('<div class="answer">', subtraction(), '</div>');
+            function subtraction() {
+                return parseInt(first) - parseInt(second);
+            }
+        })
+        $('.times').on('click', function () {
+            console.log('multiply button was clicked');
+            $('.buttons').append('<div class="answer">', multiplication(), '</div>');
+            function multiplication() {
+                return parseInt(first) * parseInt(second);
+            }
+        })
+        $('.divide').on('click', function () {
+            console.log('divide button was clicked');
+            $('.buttons').append('<div class="answer">', division(), '</div>');
+            function division() {
+                return parseInt(first) / parseInt(second);
+            }
+        })
 
     });
     $('#clearAll').on('click', function () {
