@@ -7,12 +7,16 @@ var app = express();
 var port = 5000;
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function(req, res) {
+app.get('/math', function (req, res) {
     res.send(response)
 })
 
-app.listen(port, function(req, res){
+app.post('/math', function (req, res) {
+    res.sendStatus(201);
+})
+
+app.listen(port, function (req, res) {
     console.log('Listening to port', port);
 });
