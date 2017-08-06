@@ -1,13 +1,4 @@
-var numbersArray = [
-    {
-        first: 9,
-        second: 5,
-    },
-    {
-        first: 8,
-        second: 4,
-    }
-];
+var numbersArray = [];
 
 var express = require('express');
 var bodyParser = require('body-parser');
