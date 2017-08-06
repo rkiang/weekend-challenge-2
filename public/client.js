@@ -65,42 +65,39 @@ function numbersToTable() {
             '</td>' + '</tr>' + '</div>'
         );
     }
-        $('.add').on('click', function () {
+    // Click add button will append addition() answer
+    $('.add').on('click', function () {
         console.log('add button was clicked');
-        $(this).parent().append('<tr>' + '<td>' + addition() + '</td>' + '</tr>')
+        $(this).parent().append('<tr>' + '<td>' + 'Addition Answer: ' + addition() + '</td>' + '</tr>')
         function addition() {
             return parseInt(numerial.first) + parseInt(numerial.second);
         }
     })
-}
 
-// function postNumbers() {
-//     $('#newNumbers').empty();
-//     $('#newNumbers').append('<div class="firstNumber">' + newInputNumbers.first + '</div>' +
-//         '<div class="secondNumber">' + newInputNumbers.second + '</div>' +
-//         '<div class="buttons">' + '<button class="add">Add</button>' +
-//         '<button class="sub">Subtract</button>' +
-//         '<button class="times">Multiply</button>' +
-//         '<button class="divide">Divide</button>' + '</div>');
-//     $('.add').on('click', function () {
-//         console.log('add button was clicked');
-//         $('.buttons').append('<div class="answer">' + addition() + '</div>');
-//         function addition() {
-//             return parseInt(first) + parseInt(second);
-//         }
-//     })
-//     $('.times').on('click', function () {
-//         console.log('multiply button was clicked');
-//         $('.buttons').append('<div class="answer">', multiplication(), '</div>');
-//         function multiplication() {
-//             return parseInt(first) * parseInt(second);
-//         }
-//     })
-//     $('.divide').on('click', function () {
-//         console.log('divide button was clicked');
-//         $('.buttons').append('<div class="answer">', division(), '</div>');
-//         function division() {
-//             return parseInt(first) / parseInt(second);
-//         }
-//     })
-// }
+    // Click sub button will append subtract() answer
+    $('.sub').on('click', function () {
+        console.log('sub button was clicked');
+        $(this).parent().append('<tr>' + '<td>' + 'Subtraction Answer: ' + subtract() + '</td>' + '</tr>')
+        function subtract() {
+            return parseInt(numerial.first) - parseInt(numerial.second);
+        }
+    })
+
+    // Click times button will append multiply() answer
+    $('.times').on('click', function () {
+        console.log('add button was clicked');
+        $(this).parent().append('<tr>' + '<td>' + 'Multiplication Answer: ' + multiply() + '</td>' + '</tr>')
+        function multiply() {
+            return parseInt(numerial.first) * parseInt(numerial.second);
+        }
+    })
+
+    // Click divide button will append division() answer
+    $('.divide').on('click', function () {
+        console.log('add button was clicked');
+        $(this).parent().append('<tr>' + '<td>' + 'Division Answer: ' + division() + '</td>' + '</tr>')
+        function division() {
+            return parseInt(numerial.first) / parseInt(numerial.second);
+        }
+    })
+}
