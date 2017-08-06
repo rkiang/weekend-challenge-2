@@ -29,6 +29,11 @@ $(document).ready(function () {
         })
         numbersToTable();
     });
+    // Clears table body
+    $('#clearAll').on('click', function () {
+        console.log('clear button was clicked');
+        $('#numberTableBody').empty();
+    });
 
 });
 
@@ -58,7 +63,7 @@ function numbersToTable() {
             '<button class="add">Add</button>' +
             '<button class="sub">Subtract</button>' +
             '<button class="times">Multiply</button>' +
-            '<button class="divide">Divide</button>' + 
+            '<button class="divide">Divide</button>' +
             '</td>' + '</tr>' + '</div>'
         );
     }
