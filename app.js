@@ -1,5 +1,15 @@
-var express = require('express');
+var numbersArray = [
+    {
+        first: 9,
+        second: 5,
+    },
+    {
+        first: 8,
+        second: 4,
+    }
+];
 
+var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = express();
@@ -7,16 +17,19 @@ var app = express();
 var port = 5000;
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/math', function (req, res) {
-    res.send(response)
-})
+app.get('/calculator', function(req, res){
+    res.send(numbersArray);
+});
 
-app.post('/math', function (req, res) {
+app.post('/calculator', function(req, res) {
+    console.log(req.body);
+    
+    numbersArray.push(req.body);
     res.sendStatus(201);
-})
+});
 
-app.listen(port, function (req, res) {
-    console.log('Listening to port', port);
+app.listen(port, function(){
+    console.log('Listening on port', port);
 });
